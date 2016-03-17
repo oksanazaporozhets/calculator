@@ -28,9 +28,9 @@
         <div class="masthead">
             <h3 class="text-muted">Calculator</h3>
         </div>
-        <div class="row">
+        <div class="calculatorBlock row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <table class="calculator">
+                <table id="calculator">
 				    <tr>
 				        <td colspan="5">	
 				        <p></p>
@@ -38,52 +38,56 @@
 				        <textarea rows="1" id="resultText">0</textarea>
 				        </td>
 				    </tr>
-				    <tr>
+				<!--     <tr>
 				    	<td><button type="button" id="MC" class="btn btn-default">MC</button></td>
 				    	<td><button type="button" id="MR" class="btn btn-default">MR</button></td>
 				    	<td><button type="button" id="MS" class="btn btn-default">MS</button></td>
 				    	<td><button type="button" id="plusM" class="btn btn-default">M+</button></td>
 				    	<td><button type="button" id="minusM" class="btn btn-default">M-</button></td>
 				    </tr>
-				    <tr>
-				    	<td><button type="button" id="" class="btn btn-default">del</button></td>
-				    	<td><button type="button" id="" class="btn btn-default">CE</button></td>
-				    	<td><button type="button" id="" class="btn btn-default">C</button></td>
-				    	<td><button type="button" id="" class="btn btn-default">-+</button></td>
-				    	<td><button type="button" id="" class="btn btn-default">sqrt()</button></td>
+ -->				    <tr>
+				    	<td><button type="button" id="delete-last-char" class="btn btn-default">←</button></td>
+				    	<td><button type="button" id="clean-last-arg" class="btn btn-default">CE</button></td>
+				    	<td><button type="button" id="clean-all" class="btn btn-default">C</button></td>
+				    	<td><button type="button" id="change-sign" class="btn btn-default">-+</button></td>
+				    	<td><button type="button" id="sqrt-btn" class="btn btn-default">sqrt()</button></td>
 				    </tr>
 				    <tr>
-				    	<td><button type="button" id="" class="btn btn-default digit">7</button></td>
-				    	<td><button type="button" id="" class="btn btn-default digit">8</button></td>
-				    	<td><button type="button" id="" class="btn btn-default digit">9</button></td>
-				    	<td><button type="button" id="" class="btn btn-default">/</button></td>
-				    	<td><button type="button" id="" class="btn btn-default ">%</button></td>
+				    	<td><button type="button" class="btn btn-default digit">7</button></td>
+				    	<td><button type="button" class="btn btn-default digit">8</button></td>
+				    	<td><button type="button" class="btn btn-default digit">9</button></td>
+				    	<td><button type="button" class="btn btn-default binary-operator" >/</button></td>
+				    	<td><button type="button" class="btn btn-default binary-operator">%</button></td>
 				    </tr>
 				    <tr>
-				    	<td><button type="button" id="" class="btn btn-default digit">4</button></td>
-				    	<td><button type="button" id="" class="btn btn-default digit">5</button></td>
-				    	<td><button type="button" id="" class="btn btn-default digit">6</button></td>
-				    	<td><button type="button" id="" class="btn btn-default">*</button></td>
-				    	<td><button type="button" id="" class="btn btn-default">1/x</button></td>
+				    	<td><button type="button" class="btn btn-default digit">4</button></td>
+				    	<td><button type="button" class="btn btn-default digit">5</button></td>
+				    	<td><button type="button" class="btn btn-default digit">6</button></td>
+				    	<td><button type="button" class="btn btn-default binary-operator" >*</button></td>
+				    	<td><button type="button" id="fraction1" class="btn btn-default">1/x</button></td>
 				    </tr>
 				    <tr>
-				    	<td><button type="button" id="" class="btn btn-default digit">1</button></td>
-				    	<td><button type="button" id="" class="btn btn-default digit">2</button></td>
-				    	<td><button type="button" id="" class="btn btn-default digit">3</button></td>
-				    	<td><button type="button" id="" class="btn btn-default">-</button></td>
-				    	<td rowspan="2"><button type="button" id="" class="btn btn-default doubleHeightBtn">=</button></td>
+				    	<td><button type="button" class="btn btn-default digit">1</button></td>
+				    	<td><button type="button" class="btn btn-default digit">2</button></td>
+				    	<td><button type="button" class="btn btn-default digit">3</button></td>
+				    	<td><button type="button" class="btn btn-default binary-operator">-</button></td>
+				    	<td rowspan="2"><button type="button" id="calculateBtn" class="btn btn-default doubleHeightBtn">=</button></td>
 				    </tr>
 				    <tr>
-				    	<td colspan="2"><button type="button" id="" class="btn btn-default doubleWidthBtn digit">0</button></td>
-				    	<td><button type="button" id="" class="btn btn-default">.</button></td>
-				    	<td><button type="button" id="" class="btn btn-default">+</button></td>
+				    	<td colspan="2"><button type="button" class="btn btn-default doubleWidthBtn digit">0</button></td>
+				    	<td><button type="button" class="btn btn-default digit">.</button></td>
+				    	<td><button type="button" class="btn btn-default binary-operator">+</button></td>
 				    </tr>
 				</table>
             </div>
         </div>
-      
-        <script src="js/main.js"></script>
-        <script src="js/view.js"></script>
+      	
+      	<script src="js/calculations.js"></script>
+      	<script src="js/main.js"></script>
+      	<script src="js/view.js"></script>
+    
+        
+        
         <script src="test/test.js"></script>
 
 
