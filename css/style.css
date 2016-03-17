@@ -1,0 +1,21 @@
+.calculator .btn{
+	min-width: 60px;
+    min-height: 50px;
+    margin: 2px;
+}
+
+.calculator  .doubleWidthBtn{
+	width: 126px;
+}
+
+.calculator .doubleHeightBtn{
+	height: 108px;
+}
+
+.calculator textarea{
+	font-size: 35px;
+    border-radius: 4px;
+    padding: 0px 15px;
+    text-align: right;
+    max-width: 320px;
+}
