@@ -8,9 +8,9 @@ document.getElementById('clean-last-arg').addEventListener("click", resetAll);
 
 document.getElementById('sqrt-btn').addEventListener("click", sqrtCalculate);
 document.getElementById('fraction1').addEventListener("click", fraction1Calculate);
-document.getElementById('change-sign').addEventListener("click", ChangeSignCalculate);
+document.getElementById('change-sign').addEventListener("click", changeSignCalculate);
 
-function updateResultText(newResult){
+function updateResultText(newResult) {
     var resultBlock = document.getElementById('resultText');
     resultBlock.innerHTML = newResult;
 };

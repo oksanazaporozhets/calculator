@@ -1,31 +1,31 @@
 'use strict';
 
 function sqrtCalculate() {
-    var a = +result;
-    result = Math.sqrt(a);
+    result = Math.sqrt(+result);
+    result = +result.toFixed(7);
     updateResultText(result);
     curruntOperation = '';
 };
 
 function deleteLastDigit() {
-    console.log("Work");
     if (!isNaN(result[result.lenght - 1])) {
         result = result.slice(0, -1);
     };
+    result = +result.toFixed(7);
     updateResultText(result);
     return result;
 }
 
 function fraction1Calculate() {
-    var a = +result;
-    result = 1 / a;
+    result = 1 / result;
+    result = +result.toFixed(7);
     updateResultText(result);
     curruntOperation = '';
 };
 
-function ChangeSignCalculate() {
-    var a = +result;
-    result = -a;
+function changeSignCalculate() {
+    result = -result;
+    result = +result.toFixed(7);
     updateResultText(result);
     curruntOperation = '';
 };
@@ -50,6 +50,12 @@ var operationsBinary = {
 
 function resetAll() {
     result = '0';
+    emptyInput = true;
+    calcutationFinished = false;
     updateResultText(result);
     curruntOperation = '';
+};
+
+function isNumeric(a) {
+  return !isNaN(parseFloat(a)) && isFinite(a);
 };

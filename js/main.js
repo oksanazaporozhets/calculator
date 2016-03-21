@@ -2,6 +2,8 @@
 
 var result = '0';
 var curruntOperation = '';
+var calcutationFinished = false;
+var emptyInput = true;
 document.getElementById('calculateBtn').addEventListener("click", calculate);
 
 function calculate() {
@@ -15,18 +17,26 @@ function calculate() {
         b = +list[2];
     };
     result = operationsBinary[operation](a, b);
+    result = +result.toFixed(7);
     updateResultText(result);
     curruntOperation = '';
+    calcutationFinished = true;
 };
 
 
 for (var i = 0; i < btns.length; i++) { //input numbers
     btns[i].onclick = function() {
         var inputValue = this.innerHTML;
-        if (result === "0") {
+        if (result === "0" && emptyInput) {
             result = inputValue;
+            emptyInput = false;
         } else {
+        	if(calcutationFinished && curruntOperation === ''){
+        		result = '';
+        	};
+        	calcutationFinished = false;
             result = result + inputValue;
+            //result = +parseFloat(result).toFixed(7);
         };
         updateResultText(result);
     };
